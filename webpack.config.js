@@ -14,6 +14,7 @@ module.exports = {
         extensions: ['.js', '.jsx'],
         alias: {
             '@componentStyles': path.resolve(__dirname, 'src/styles/components'),
+            '@containers': path.resolve(__dirname, 'src/containers'),
         }
     },
     module: {
@@ -59,6 +60,7 @@ module.exports = {
         compress: true,
         port: 3005,
         open: true,
+        historyApiFallback: true
     }
 }
 
