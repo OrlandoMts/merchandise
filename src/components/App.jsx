@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import '@componentStyles/App.scss';
 
 const App = () => {
     return (
-        <div>
+        <div className='App'>
             <h1>Hola mundo</h1>
         </div>
     )
