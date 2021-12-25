@@ -1,9 +1,16 @@
-import React from 'react'
+import React from 'react';
+import '@componentStyles/Payment.css';
 
 const Payment = () => {
     return (
-        <div>
-            <h2>Payment</h2>
+        <div className='Payment'>
+            <div className='Payment-content'>
+                <h3>Resumen del pedido:</h3>
+                <div className='Payment-button'>
+                    Boton de pago con paypal
+                </div>
+            </div>
+            <div></div>
         </div>
     )
 }
