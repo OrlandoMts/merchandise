@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import initialState from '../initialState';
+import { Products } from '../components/Products';
 
 const Home = () => {
     return (
-        <div>
-            <h1>home</h1>
+        <div className='Home'>
+            <Products products={initialState.products}/>
         </div>
     )
 }
