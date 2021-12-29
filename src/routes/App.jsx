@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route,} from 'react-router-dom';
 import { Layout } from '../components/Layout';
 import { Home } from "@containers/Home";
 import { Checkout } from "@containers/Checkout";
