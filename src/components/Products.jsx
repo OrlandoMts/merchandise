@@ -8,8 +8,8 @@ const Products = () => {
     const { state, addToCart } = useContext(AppContext);
     const { products } = state; //Trae los productos del estado
 
-    const handleAddToCart = payload => {
-        addToCart(payload);
+    const handleAddToCart = product => {
+        addToCart(product);
     }
 
     return (

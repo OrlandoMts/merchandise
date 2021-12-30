@@ -8,8 +8,8 @@ const Checkout = () => {
 
     const { state: {cart}, removeFromCart } = useContext(AppContext);
 
-    const handleRemove = (payload, index) => {
-        removeFromCart(payload, index);
+    const handleRemove = (product, index) => {
+        removeFromCart(product, index);
     }
 
     const handleSumTotal = () => {
