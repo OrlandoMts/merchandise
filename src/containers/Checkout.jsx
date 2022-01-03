@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
 import '../styles/components/Checkout.css';
 import { TiTimesOutline } from 'react-icons/ti';
+import { sumTotal } from '../utils/sumTotal';
 
 const Checkout = () => {
 
@@ -22,10 +23,15 @@ const Checkout = () => {
         return cart.length;
     }, [cart])
 
+    // const quantityCart = () => {
+    //     // sumTotal(cart);
+    //     return cart.length;
+    // }
+
     return (
         <div className='Checkout'>
             <div className='Checkout-content'>
-                {quantityCart > 0 ? <h3>Lista de pedidos</h3> : <h3>No hay productos en el carrito</h3>}
+                { quantityCart > 0 ? <h3>Lista de pedidos</h3> : <h3>No hay productos en el carrito</h3>}
                 {cart.map((item, index) => (
                     <div className='Checkout-item' key={index}>
                         <div className='Checkout-element'>
@@ -37,7 +43,7 @@ const Checkout = () => {
                     </div>
                 ))}
             </div>
-            {quantityCart > 0 && (
+            { quantityCart > 0 && (
                 <div className='Checkout-sidebar'>
                     <h3>Precio Total: ${handleSumTotal()}</h3>
                     <Link to='/checkout/information'>
