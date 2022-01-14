@@ -4,6 +4,7 @@ import { PayPalButton } from 'react-paypal-button-v2';
 import { AppContext } from '../context/AppContext';
 import { sumTotal } from '../utils/sumTotal';
 import '@componentStyles/Payment.css';
+import { pass } from '../pass';
 
 const Payment = () => {
 
@@ -11,7 +12,7 @@ const Payment = () => {
     const navigate = useNavigate();
 
     const paypalOptions = {
-        clientId: "sb", // Your PayPal REST client ID. While you're testing in sandbox, you can use client-id=sb as a shortcut.
+        clientId: pass.paypalPaymentCliendId, // Your PayPal REST client ID. While you're testing in sandbox, you can use client-id=sb as a shortcut.
         currency: "USD"
     }
 
@@ -21,7 +22,6 @@ const Payment = () => {
     }
 
     const handlePaymentSuccess = data => {
-        console.log(data);
         if(data.status === 'COMPLETED') {
             const newOrder = {
                 buyer,
