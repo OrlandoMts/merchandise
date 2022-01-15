@@ -9,7 +9,6 @@ const Success = () => {
     //Cambiar el estado de arrgelo a obj
     const {state: {buyer}} = useContext(AppContext);
     const location = useGetAddress(buyer.address);
-    console.log("objeto buyer ", buyer);
 
     return (
         <div className='Success'>
