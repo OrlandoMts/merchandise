@@ -57,8 +57,12 @@ module.exports = {
         new MiniExtractCssPlugin({
             filename: '[name].css'
         }),
-        new DotenvWebpackPlugin(),
-        
+        new DotenvWebpackPlugin({
+			path: './.env',
+			safe: true,
+			systemvars: true,
+			defaults: false,
+		}),
         new EnvironmentPlugin([
         'CLIENT_ID_PAYPAL',
         'GOOGLE_MAPS_ID',
