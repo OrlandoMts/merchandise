@@ -14,7 +14,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Build
-        run: CLIENT_ID_PAYPAL=$CLIENT_ID_PAYPAL GOOGLE_MAPS_ID=$GOOGLE_MAPS_ID
+        run: npm run build
         env:
           CLIENT_ID_PAYPAL: ${{ secrets.CLIENT_ID_PAYPAL }}
           GOOGLE_MAPS_ID: ${{ secrets.GOOGLE_MAPS_ID }}
