@@ -14,7 +14,10 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Build
-        run: npm run build
+        run: CLIENT_ID_PAYPAL=$CLIENT_ID_PAYPAL GOOGLE_MAPS_ID=$GOOGLE_MAPS_ID
+        env:
+          CLIENT_ID_PAYPAL: ${{ secrets.CLIENT_ID_PAYPAL }}
+          GOOGLE_MAPS_ID: ${{ secrets.GOOGLE_MAPS_ID }}
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
@@ -38,5 +41,3 @@ jobs:
           args: deploy --only hosting
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-          CLIENT_ID_PAYPAL: ${{ secrets.CLIENT_ID_PAYPAL }}
-          GOOGLE_MAPS_ID: ${{ secrets.GOOGLE_MAPS_ID }}
