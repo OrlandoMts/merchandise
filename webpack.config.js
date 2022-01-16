@@ -61,8 +61,8 @@ module.exports = {
         
         new webpack.DefinePlugin({
             'process.env': {
-                'CLIENT_ID_PAYPAL': JSON.stringify(process.env.CLIENT_ID_PAYPAL),
-                'GOOGLE_MAPS_ID': JSON.stringify(process.env.GOOGLE_MAPS_ID)
+                CLIENT_ID_PAYPAL: JSON.stringify(process.env.CLIENT_ID_PAYPAL),
+                GOOGLE_MAPS_ID: JSON.stringify(process.env.GOOGLE_MAPS_ID)
             }
           })   
     ],
